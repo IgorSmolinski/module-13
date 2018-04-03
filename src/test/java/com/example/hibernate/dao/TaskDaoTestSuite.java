@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -43,10 +44,11 @@ import java.util.List;
             taskDao.delete(id);
         }
         @Test
-        public void testTaskDaoFindByDuration(){
+            public void testTaskDaoFindByDuration(){
             //Given
             Task task = new Task(DESCRIPTION, 7);
             taskDao.save(task);
+            int id2 = task.getId();
             int duration = task.getDuration();
 
             //When
@@ -57,7 +59,7 @@ import java.util.List;
 
             //CleanUp
             int id = readTask.get(0).getId();
-            taskDao.delete(id);
+            taskDao.delete(id2);
         }
 
         @Test
