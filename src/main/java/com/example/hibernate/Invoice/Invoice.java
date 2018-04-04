@@ -33,9 +33,11 @@ public class Invoice {
         return number;
     }
 
-    @OneToMany (targetEntity = Item.class,
+    /*@OneToMany (targetEntity = Item.class,
                 cascade = CascadeType.MERGE,   //Jak dałem ALL to wyskakiwał błąd detached entity passed to persist
-                fetch = FetchType.LAZY)
+                fetch = FetchType.LAZY)*/
+    @OneToMany
+    @JoinColumn(name="ITEM_ID")
     public List<Item> getItems() {
         return items;
     }

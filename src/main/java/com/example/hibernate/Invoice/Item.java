@@ -23,7 +23,6 @@ public class Item {
         this.value = value;
     }
 
-
     @Id
     @NotNull
     @GeneratedValue

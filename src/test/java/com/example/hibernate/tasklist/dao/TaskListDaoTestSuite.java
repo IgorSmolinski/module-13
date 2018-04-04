@@ -1,6 +1,6 @@
 package com.example.hibernate.tasklist.dao;
 
-import com.example.hibernate.dao.TaskListDao;
+import com.example.hibernate.tasklist.dao.TaskListDao;
 import com.example.hibernate.tasklist.TaskList;
 import org.junit.Assert;
 import org.junit.Test;

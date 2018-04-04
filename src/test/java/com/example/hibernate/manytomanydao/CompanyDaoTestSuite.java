@@ -113,7 +113,7 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
 
         //When
-        List<Company> companyListStartsWith = companyDao.retrieve3FirstLetters("Software Machine");
+        List<Company> companyListStartsWith = companyDao.retrieve3FirstLetters("% + Sof + %");
 
         //Then
         Assert.assertEquals(1, companyListStartsWith.size());
